@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int lector(int numero){
+	int digitos_totales=0;
+	int numero_copia=numero;
+	while(numero_copia>=1){
+		numero_copia/=10;
+		digitos_totales++;
+	}
+	int suma_total=0;
+	int n=1;
+	int division=1;
+	while(n>=1){
+		int potencia=10;
+		for(int i=0;i<división;i++) potencia*=potencia;
+		n=(numero%potencia)/(potencia/10);
+		division++;
+		int numero_sumar=n;
+		for(int i=0;i<digitos_totales;i++) numero_sumar*=numero_sumar;
+		suma_total+=numero_sumar;
+	}
+
+	if(suma_total==numero){//cumple
+		return true;
+	}
+	else{
+		return false;
+	}
+}
